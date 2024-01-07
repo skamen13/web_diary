@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Веб-блокнот</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="container">
+    <h1>Список заметок</h1>
+    <ul>
+        <% for (const note of notes) { %>
+            <li class="sticker"><a href="/edit/<%= note %>"><%= note %></a></li>
+        <% } %>
+    </ul>
+    <a href="/create">Создать новую заметку</a>
+</div>
+</body>
+</html>

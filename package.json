@@ -1,0 +1,26 @@
+{
+  "name": "web_diary",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "axios": "^1.6.5",
+    "bcrypt": "^5.1.1",
+    "body-parser": "^1.20.2",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "mongoose": "^8.0.3",
+    "node-fetch": "^3.3.2",
+    "passport": "^0.7.0",
+    "passport-local": "^1.0.0",
+    "quill": "^1.3.7"
+  }
+}
