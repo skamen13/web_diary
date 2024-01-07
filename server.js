@@ -68,7 +68,7 @@ app.post('/generate-text', async (req, res) => {
             {
                 data: {
                     message:
-                        'Продолжите текст, используя HTML знаки для изменения шрифтов, цветов, и т.д., ваша цель: "' + task.split('$')[0] + '". Вот этот текст: ' + task.split('$')[1],
+                        task.split('$')[0] + ' : ' + task.split('$')[1],
                 },
             },
             {
