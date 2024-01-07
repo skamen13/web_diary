@@ -20,14 +20,21 @@ if (!fs.existsSync(notesDir)) {
     fs.mkdirSync(notesDir);
 }
 
-app.get('/', (req, res) => {
-    const notes = fs.readdirSync(notesDir);
-    res.render('index', { notes });
-});
-
 app.get('/create', (req, res) => {
     res.render('create');
 });
+
+// Новый маршрут для обработки создания новой заметки
+app.post('/create', (req, res) => {
+    const title = req.body.title || 'new_note';
+    const filePath = `${notesDir}${title}.html`;
+
+    // Создание новой заметки
+    fs.writeFileSync(filePath, '<p></p>');
+
+    res.redirect('/');
+});
+
 
 app.get('/edit/:fileName', (req, res) => {
     const fileName = req.params.fileName;
